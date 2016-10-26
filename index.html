@@ -1,0 +1,499 @@
+<html>
+  <head>
+    <!-- Core CSS file -->
+    <link rel="stylesheet" href="node_modules/photoswipe/dist/photoswipe.css">
+
+    <!-- Skin CSS file (styling of UI - buttons, caption, etc.)
+         In the folder of skin CSS file there are also:
+         - .png and .svg icons sprite,
+         - preloader.gif (for browsers that do not support CSS animations) -->
+    <link rel="stylesheet" href="node_modules/photoswipe/dist/default-skin/default-skin.css">
+
+    <!-- Core JS file -->
+    <script src="node_modules/photoswipe/dist/photoswipe.min.js"></script>
+    <!-- UI JS file -->
+    <script src="node_modules/photoswipe/dist/photoswipe-ui-default.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lato" rel="stylesheet">
+  </head>
+  <style>
+  * {
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    font-family: 'Fjalla One', sans-serif;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  figure {
+    margin: 0;
+  }
+  .my-gallery {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    margin-bottom: 10rem;
+    max-width: 700px;
+}
+.my-gallery img {
+  height: 100%;
+  width: auto;
+}
+.my-gallery figure {
+  display: block;
+  margin: 3.15px;
+  width: 168.65px;
+  border-radius: 2.5px;
+  overflow: hidden;
+  height: 168.65px;
+}
+.my-gallery figcaption {
+  display: none;
+}
+
+.big {
+  width: 518px !important;
+  height: auto !important;
+  max-height: 700px !important;
+}
+
+.big img {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.title {
+  text-align: center;
+  color: #5e5b55;
+  margin-bottom: 5rem;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  font-size: 14px;
+  display: inline-block;
+  border-bottom: 2px solid #5e5b55;
+}
+
+.center {
+  text-align: center;
+}
+
+.logo {
+  margin-top: 5rem;
+  width: 3rem;
+  display: inline-block;
+}
+
+.half {
+  width: 350px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.quarter {
+  width: 175px;
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.medium {
+  width: 343.5px !important;
+  height: 343.5px !important;
+}
+
+@media (max-width: 700px) {
+  .my-gallery {
+    flex-direction: column;
+  }
+  .my-gallery figure, .my-gallery figure img, .half {
+    width: 100%;
+    height: auto;
+  }
+}
+
+  </style>
+  <body>
+    <div class="center">
+      <a href="http://burakaslan.me">
+        <img src="logo.svg" class="logo" />
+        <br />
+        <h2 class="title">
+          Burak Aslan
+        </h2>
+      </a>
+    </div>
+    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+      <div class="half">
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+          <a href="photos/sandiego/IMG_4111.jpg" itemprop="contentUrl" data-size="1334x750">
+            <img src="photos/sandiego/IMG_4111_sm.jpg" itemprop="thumbnail" alt="New York City" />
+          </a>
+          <figcaption itemprop="caption description"></figcaption>
+        </figure>
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+          <a href="photos/sandiego/IMG_4238.jpg" itemprop="contentUrl" data-size="2448x3264">
+            <img style="width: 100%; height: auto;" src="photos/sandiego/IMG_4238_sm.jpg" itemprop="thumbnail" alt="New York City" />
+          </a>
+          <figcaption itemprop="caption description"></figcaption>
+        </figure>
+
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+          <a href="photos/sandiego/IMG_4546.jpg" itemprop="contentUrl" data-size="6254x2936">
+            <img src="photos/sandiego/IMG_4546_sm.jpg" itemprop="thumbnail" alt="New York City" />
+          </a>
+          <figcaption itemprop="caption description"></figcaption>
+        </figure>
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+          <a href="photos/IMG_5666.jpg" itemprop="contentUrl" data-size="3264x2448">
+            <img src="photos/IMG_5666_sm.jpg" itemprop="thumbnail" alt="Florida" />
+          </a>
+          <figcaption itemprop="caption description"></figcaption>
+        </figure>
+      </div>
+      <div>
+      <figure class="medium" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="photos/sandiego/IMG_4653.jpg" itemprop="contentUrl" data-size="3264x2447">
+          <img src="photos/sandiego/IMG_4653_sm.jpg" itemprop="thumbnail" alt="New York City" />
+        </a>
+        <figcaption itemprop="caption description"></figcaption>
+      </figure>
+      </div>
+      <div style="display:flex;">
+      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="photos/nyc/IMG_5441.jpg" itemprop="contentUrl" data-size="6924x3092">
+          <img src="photos/nyc/IMG_5441_sm.jpg" itemprop="thumbnail" alt="New York City" />
+        </a>
+        <figcaption itemprop="caption description"></figcaption>
+      </figure>
+
+      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="photos/nyc/IMG_5507.jpg" itemprop="contentUrl" data-size="10758x3100">
+          <img src="photos/nyc/IMG_5507_sm.jpg" itemprop="thumbnail" alt="New York City" />
+        </a>
+        <figcaption itemprop="caption description"></figcaption>
+      </figure>
+
+      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="photos/nyc/IMG_5533.jpg" itemprop="contentUrl" data-size="3264x2448">
+          <img src="photos/nyc/IMG_5533_sm.jpg" itemprop="thumbnail" alt="New York City" />
+        </a>
+        <figcaption itemprop="caption description"></figcaption>
+      </figure>
+
+      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="photos/IMG_5113.jpg" itemprop="contentUrl" data-size="2448x3264">
+          <img src="photos/IMG_5113_sm.jpg" itemprop="thumbnail" alt="Airplane" />
+        </a>
+        <figcaption itemprop="caption description"></figcaption>
+      </figure>
+    </div>
+    <div>
+      <figure class="big" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="photos/nyc/IMG_5447.jpg" itemprop="contentUrl" data-size="2448x3264">
+          <img style="margin-top: -120px;" src="photos/nyc/IMG_5447.jpg" itemprop="thumbnail" alt="Kentucky" />
+        </a>
+        <figcaption itemprop="caption description"></figcaption>
+      </figure>
+    </div>
+      <div class="quarter">
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+          <a href="photos/kentucky/IMG_5361.jpg" itemprop="contentUrl" data-size="1334x750">
+            <img src="photos/kentucky/IMG_5361_sm.jpg" itemprop="thumbnail" alt="Kentucky" />
+          </a>
+          <figcaption itemprop="caption description"></figcaption>
+        </figure>
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+          <a href="photos/kentucky/IMG_5356.jpg" itemprop="contentUrl" data-size="1334x750">
+            <img src="photos/kentucky/IMG_5356_sm.jpg" itemprop="thumbnail" alt="Kentucky" />
+          </a>
+          <figcaption itemprop="caption description"></figcaption>
+        </figure>
+      </div>
+
+    </div>
+
+
+
+
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+      <!-- Background of PhotoSwipe.
+      It's a separate element, as animating opacity is faster than rgba(). -->
+      <div class="pswp__bg"></div>
+
+      <!-- Slides wrapper with overflow:hidden. -->
+      <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+          <div class="pswp__top-bar">
+
+            <!--  Controls are self-explanatory. Order can be changed. -->
+
+            <div class="pswp__counter"></div>
+
+            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+            <button class="pswp__button pswp__button--share" title="Share"></button>
+
+            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+            <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+            <!-- element will get class pswp__preloader--active when preloader is running -->
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+            <div class="pswp__share-tooltip"></div>
+          </div>
+
+          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+          </button>
+
+          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+          </button>
+
+          <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+  <script>
+  var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+      // parse slide data (url, title, size ...) from DOM elements
+      // (children of gallerySelector)
+      var parseThumbnailElements = function(el) {
+          var thumbElements = el.childNodes,
+              numNodes = thumbElements.length,
+              items = [],
+              figureEl,
+              linkEl,
+              size,
+              item;
+
+          for(var i = 0; i < numNodes; i++) {
+
+              figureEl = thumbElements[i]; // <figure> element
+
+              // include only element nodes
+              if(figureEl.nodeType !== 1) {
+                  continue;
+              }
+
+              linkEl = figureEl.children[0]; // <a> element
+
+              size = linkEl.getAttribute('data-size').split('x');
+
+              // create slide object
+              item = {
+                  src: linkEl.getAttribute('href'),
+                  w: parseInt(size[0], 10),
+                  h: parseInt(size[1], 10)
+              };
+
+
+
+              if(figureEl.children.length > 1) {
+                  // <figcaption> content
+                  item.title = figureEl.children[1].innerHTML;
+              }
+
+              if(linkEl.children.length > 0) {
+                  // <img> thumbnail element, retrieving thumbnail url
+                  item.msrc = linkEl.children[0].getAttribute('src');
+              }
+
+              item.el = figureEl; // save link to element for getThumbBoundsFn
+              items.push(item);
+          }
+
+          return items;
+      };
+
+      // find nearest parent element
+      var closest = function closest(el, fn) {
+          return el && ( fn(el) ? el : closest(el.parentNode, fn) );
+      };
+
+      // triggers when user clicks on thumbnail
+      var onThumbnailsClick = function(e) {
+          e = e || window.event;
+          e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+          var eTarget = e.target || e.srcElement;
+
+          // find root element of slide
+          var clickedListItem = closest(eTarget, function(el) {
+              return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+          });
+
+          if(!clickedListItem) {
+              return;
+          }
+
+          // find index of clicked item by looping through all child nodes
+          // alternatively, you may define index via data- attribute
+          var clickedGallery = clickedListItem.parentNode,
+              childNodes = clickedListItem.parentNode.childNodes,
+              numChildNodes = childNodes.length,
+              nodeIndex = 0,
+              index;
+
+          for (var i = 0; i < numChildNodes; i++) {
+              if(childNodes[i].nodeType !== 1) {
+                  continue;
+              }
+
+              if(childNodes[i] === clickedListItem) {
+                  index = nodeIndex;
+                  break;
+              }
+              nodeIndex++;
+          }
+
+
+
+          if(index >= 0) {
+              // open PhotoSwipe if valid index found
+              openPhotoSwipe( index, clickedGallery );
+          }
+          return false;
+      };
+
+      // parse picture index and gallery index from URL (#&pid=1&gid=2)
+      var photoswipeParseHash = function() {
+          var hash = window.location.hash.substring(1),
+          params = {};
+
+          if(hash.length < 5) {
+              return params;
+          }
+
+          var vars = hash.split('&');
+          for (var i = 0; i < vars.length; i++) {
+              if(!vars[i]) {
+                  continue;
+              }
+              var pair = vars[i].split('=');
+              if(pair.length < 2) {
+                  continue;
+              }
+              params[pair[0]] = pair[1];
+          }
+
+          if(params.gid) {
+              params.gid = parseInt(params.gid, 10);
+          }
+
+          return params;
+      };
+
+      var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+          var pswpElement = document.querySelectorAll('.pswp')[0],
+              gallery,
+              options,
+              items;
+
+          items = parseThumbnailElements(galleryElement);
+
+          // define options (if needed)
+          options = {
+            showAnimationDuration: 0,
+              // define gallery index (for URL)
+              galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+              getThumbBoundsFn: function(index) {
+                  // See Options -> getThumbBoundsFn section of documentation for more info
+                  var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                      pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                      rect = thumbnail.getBoundingClientRect();
+
+                  return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
+              }
+
+          };
+
+          // PhotoSwipe opened from URL
+          if(fromURL) {
+              if(options.galleryPIDs) {
+                  // parse real index when custom PIDs are used
+                  // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                  for(var j = 0; j < items.length; j++) {
+                      if(items[j].pid == index) {
+                          options.index = j;
+                          break;
+                      }
+                  }
+              } else {
+                  // in URL indexes start from 1
+                  options.index = parseInt(index, 10) - 1;
+              }
+          } else {
+              options.index = parseInt(index, 10);
+          }
+
+          // exit if index not found
+          if( isNaN(options.index) ) {
+              return;
+          }
+
+          if(disableAnimation) {
+              options.showAnimationDuration = 0;
+          }
+
+          // Pass data to PhotoSwipe and initialize it
+          gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+          gallery.init();
+      };
+
+      // loop through all gallery elements and bind events
+      var galleryElements = document.querySelectorAll( gallerySelector );
+
+      for(var i = 0, l = galleryElements.length; i < l; i++) {
+          galleryElements[i].setAttribute('data-pswp-uid', i+1);
+          galleryElements[i].onclick = onThumbnailsClick;
+      }
+
+      // Parse URL and open gallery if it contains #&pid=3&gid=1
+      var hashData = photoswipeParseHash();
+      if(hashData.pid && hashData.gid) {
+          openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
+      }
+  };
+
+  // execute above function
+  initPhotoSwipeFromDOM('.my-gallery');
+  </script>
+</html>
