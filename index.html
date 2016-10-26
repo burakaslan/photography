@@ -3,9 +3,10 @@
   <meta charset="UTF-8">
   <title>Photos - Burak Aslan</title>
   <meta name="description" content="I create stuff.">
-  <meta name="viewport" content="width=device-width, user-scalable=no" />
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/animate.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <link rel="stylesheet" href="animate.css">
+
+  <link rel="stylesheet" href="style.css">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="mstile-144x144.png">
   <script>
@@ -57,6 +58,7 @@
     <script src="node_modules/photoswipe/dist/photoswipe.min.js"></script>
     <!-- UI JS file -->
     <script src="node_modules/photoswipe/dist/photoswipe-ui-default.min.js"></script>
+    <script src="wow.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lato" rel="stylesheet">
   </head>
@@ -67,7 +69,7 @@
   }
   h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Fjalla One', sans-serif !important;
   }
 
   body {
@@ -98,6 +100,8 @@ a {
   width: 168.65px;
   border-radius: 2.5px;
   overflow: hidden;
+  display: flex;
+    justify-content: center;
   height: 168.65px;
 }
 .my-gallery figcaption {
@@ -113,6 +117,10 @@ a {
 .big img {
   width: 100% !important;
   height: auto !important;
+}
+
+.flex {
+  display:flex;
 }
 
 .title {
@@ -136,7 +144,7 @@ a {
   display: none;
 }
 
-.logo {
+.logo2 {
   margin-top: 5rem;
   width: 3rem;
   display: inline-block;
@@ -155,6 +163,15 @@ a {
   flex-wrap: wrap;
 }
 
+.middle {
+  width: 344px !important;
+}
+
+.middle img {
+  width: 100% !important;
+  height: auto !important;
+}
+
 .medium {
   width: 343.5px !important;
   height: 343.5px !important;
@@ -164,17 +181,20 @@ a {
   .my-gallery {
     flex-direction: column;
   }
-  .my-gallery figure, .my-gallery figure img, .half {
-    width: 100%;
-    height: auto;
+  .my-gallery figure, .my-gallery figure img, .half, .middle img, .quarter {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .flex {
+    flex-direction: column;
   }
 }
 
   </style>
   <body>
-    <div class="center">
+    <div class="center animated fadeIn">
       <a href="http://burakaslan.me">
-        <img src="logo.svg" class="logo" />
+        <img src="logo.svg" class="logo2" />
         <br />
         <h2 class="title">
           Burak Aslan
@@ -183,26 +203,26 @@ a {
     </div>
     <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
       <div class="half">
-        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <figure class="wow fadeInUp" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
           <a href="photos/sandiego/IMG_4111.jpg" itemprop="contentUrl" data-size="1334x750">
             <img src="photos/sandiego/IMG_4111_sm.jpg" itemprop="thumbnail" alt="New York City" />
           </a>
           <figcaption itemprop="caption description"></figcaption>
         </figure>
-        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <figure class="wow fadeInUp" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
           <a href="photos/sandiego/IMG_4238.jpg" itemprop="contentUrl" data-size="2448x3264">
             <img style="width: 100%; height: auto;" src="photos/sandiego/IMG_4238_sm.jpg" itemprop="thumbnail" alt="New York City" />
           </a>
           <figcaption itemprop="caption description"></figcaption>
         </figure>
 
-        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <figure class="wow fadeInUp" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
           <a href="photos/sandiego/IMG_4546.jpg" itemprop="contentUrl" data-size="6254x2936">
             <img src="photos/sandiego/IMG_4546_sm.jpg" itemprop="thumbnail" alt="New York City" />
           </a>
           <figcaption itemprop="caption description"></figcaption>
         </figure>
-        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <figure class="wow fadeInUp" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
           <a href="photos/IMG_5666.jpg" itemprop="contentUrl" data-size="3264x2448">
             <img src="photos/IMG_5666_sm.jpg" itemprop="thumbnail" alt="Florida" />
           </a>
@@ -210,44 +230,40 @@ a {
         </figure>
       </div>
       <div>
-      <figure class="medium" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <figure class="medium wow fadeInUp" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="photos/sandiego/IMG_4653.jpg" itemprop="contentUrl" data-size="3264x2447">
           <img src="photos/sandiego/IMG_4653_sm.jpg" itemprop="thumbnail" alt="New York City" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
       </figure>
       </div>
-      <div style="display:flex;">
-      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-        <a href="photos/nyc/IMG_5441.jpg" itemprop="contentUrl" data-size="6924x3092">
+      <div class="flex">
+      <figure class="wow fadeInUp" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="photos/nyc/IMG_5441.jpg" itemprop="contentUrl" data-size="5049x3092">
           <img src="photos/nyc/IMG_5441_sm.jpg" itemprop="thumbnail" alt="New York City" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
       </figure>
 
-      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-        <a href="photos/nyc/IMG_5507.jpg" itemprop="contentUrl" data-size="10758x3100">
-          <img src="photos/nyc/IMG_5507_sm.jpg" itemprop="thumbnail" alt="New York City" />
-        </a>
-        <figcaption itemprop="caption description"></figcaption>
-      </figure>
-
-      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <figure class="wow fadeInUp middle" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="photos/nyc/IMG_5533.jpg" itemprop="contentUrl" data-size="3264x2448">
           <img src="photos/nyc/IMG_5533_sm.jpg" itemprop="thumbnail" alt="New York City" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
       </figure>
 
-      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-        <a href="photos/IMG_5113.jpg" itemprop="contentUrl" data-size="2448x3264">
-          <img src="photos/IMG_5113_sm.jpg" itemprop="thumbnail" alt="Airplane" />
+      <figure class="wow fadeInUp" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="photos/nyc/IMG_5507.jpg" itemprop="contentUrl" data-size="10758x3100">
+          <img src="photos/nyc/IMG_5507_sm.jpg" itemprop="thumbnail" alt="New York City" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
       </figure>
+
+
+
     </div>
     <div>
-      <figure class="big" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <figure class="big wow fadeInUp" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="photos/nyc/IMG_5447.jpg" itemprop="contentUrl" data-size="2448x3264">
           <img style="margin-top: -120px;" src="photos/nyc/IMG_5447.jpg" itemprop="thumbnail" alt="Kentucky" />
         </a>
@@ -255,15 +271,22 @@ a {
       </figure>
     </div>
       <div class="quarter">
-        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <figure class="wow fadeInUp" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
           <a href="photos/kentucky/IMG_5361.jpg" itemprop="contentUrl" data-size="1334x750">
             <img src="photos/kentucky/IMG_5361_sm.jpg" itemprop="thumbnail" alt="Kentucky" />
           </a>
           <figcaption itemprop="caption description"></figcaption>
         </figure>
-        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <figure class="wow fadeInUp" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
           <a href="photos/kentucky/IMG_5356.jpg" itemprop="contentUrl" data-size="1334x750">
             <img src="photos/kentucky/IMG_5356_sm.jpg" itemprop="thumbnail" alt="Kentucky" />
+          </a>
+          <figcaption itemprop="caption description"></figcaption>
+        </figure>
+
+        <figure class="wow fadeInUp" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+          <a href="photos/IMG_5113.jpg" itemprop="contentUrl" data-size="2448x3264">
+            <img src="photos/IMG_5113_sm.jpg" itemprop="thumbnail" alt="Airplane" />
           </a>
           <figcaption itemprop="caption description"></figcaption>
         </figure>
@@ -272,7 +295,41 @@ a {
     </div>
 
 
-
+    <div class="footer">
+        <svg onclick="$('body').scrollTop(0)" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+        <style type="text/css">
+        	.btm{fill:#E0E0E0;}
+        	.btm1{fill:#ECECEC;}
+        	.btm2{fill:#E2E2E2;}
+        	.btm3{fill:#ECECEC;}
+        	.btm4{fill:#DADADA;}
+        	.btm5{fill:#DADADA;}
+        </style>
+        <polygon id="XMLID_9_" class="btm" points="226.7,292.8 192.1,364.8 331.6,447.8 240.3,286.2 "/>
+        <polygon id="XMLID_1_" class="btm" points="136.3,224.6 56.7,287.3 240.3,287.6 193.5,207.3 "/>
+        <polyline id="XMLID_4_" class="btm1" points="148.1,130.7 194.2,209.2 56.7,288 "/>
+        <polygon id="XMLID_10_" class="btm2" points="148.1,130.7 194,209.5 330.8,129.8 284.5,51.9 "/>
+        <polyline id="XMLID_6_" class="btm3" points="330.8,129.8 286.1,50.3 148.3,130.7 "/>
+        <polygon id="XMLID_8_" class="btm" points="302,160.2 240.3,287.6 330.8,287.6 330.8,129.8 "/>
+        <polyline id="XMLID_5_" class="btm4" points="240.3,287.6 194,209.5 330.8,129.8 "/>
+        <polyline id="XMLID_7_" class="btm4" points="240.3,287.6 330.8,287.6 331.6,447 "/>
+        <polyline id="XMLID_3_" class="btm1" points="56.7,287.1 195,366.5 240.3,287.6 "/>
+        <path id="XMLID_2_" class="btm5" d="M330.8,287.6l0-156.9l0-0.9l139.8,79.3l-45.3,78.5C425.2,287.6,333,287.6,330.8,287.6z"/>
+        </svg>
+        <a href="http://burakaslan.me">
+          Work
+        </a>
+        <a href="http://burakaslan.me/about">
+          About me
+        </a>
+        <a target="_blank" href="https://medium.com/@deadlocked_d">
+          Blog
+        </a>
+        <a href="mailto:burak.aslan@me.com">
+          Contact
+        </a>
+    </div>
 
     <!-- Root element of PhotoSwipe. Must have class pswp. -->
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
@@ -342,6 +399,7 @@ a {
 
   </body>
   <script>
+    new WOW().init();
   var initPhotoSwipeFromDOM = function(gallerySelector) {
 
       // parse slide data (url, title, size ...) from DOM elements
