@@ -93,6 +93,14 @@ a {
 .my-gallery img {
   height: 100%;
   width: auto;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition-duration: 0.25s;
+}
+
+.my-gallery figure:hover img {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
 }
 .my-gallery figure {
   display: block;
@@ -540,6 +548,10 @@ a {
 
           // define options (if needed)
           options = {
+            shareButtons: [
+                {id:'twitter', label:'Tweet', url:'https://twitter.com/intent/tweet?text=Check%20out%20this%20cool%20pic%20🔥&url=http%3A%2F%2Fburakaslan.photos'},
+                {id:'download', label:'Download image', url:'{{raw_image_url}}', download:true}
+            ],
             showAnimationDuration: 0,
             arrowKeys: false,
             loop: false,
